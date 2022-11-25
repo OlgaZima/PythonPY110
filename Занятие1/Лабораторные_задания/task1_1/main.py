@@ -10,6 +10,6 @@ def task() -> list:
 
     return list(map(int, num_list))  # TODO c помощью функции map привести каждый элемент списка к типу int
 
-''
+
 if __name__ == "__main__":
     print(task())
