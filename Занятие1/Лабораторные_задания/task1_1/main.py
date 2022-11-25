@@ -13,3 +13,4 @@ def task() -> list:
 
 if __name__ == "__main__":
     print(task())
+"bgjhkjhkj"
