@@ -1,5 +1,10 @@
+import itertools
+
+
 def pow_gen(base: int):
-    ...  # TODO записать функцию-генератор
+    for i in itertools.count(0, 1):
+        res = (base ** i)
+        yield res    # TODO записать функцию-генератор
 
 
 if __name__ == "__main__":
