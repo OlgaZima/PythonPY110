@@ -2,7 +2,8 @@ import json
 import re
 
 BOOKS_FILE = "books.md"
-BOOK_REGEX = r"""####\s+(?P<position>\d+)\.\s+\[(?P<book>.+?)\]\((?P<book_url>.+?)\)\s+by\s+(?P<author>.+?)\s+\((?P<recommended>\d+\.\d+%)\s+recommended\)\s+!\[\]\((?P<cover_url>.+?)\)\s+\"(?P<description>.+?)\""""
+BOOK_REGEX = r"""####\s+(?P<position>\d+)\.\s+\[(?P<book>.+?)\]\((?P<book_url>.+?)\)\s+by\s+(?P<author>.+?)\s+\((?P<recommended>\d+\.\d+%)\s+recommended\)\s+!\[.*?\]\((?P<cover_url>.+?)\)\s+\"(?P<description>.+?)\"\s+\[.*?\]\(.*?\)"""
+
 
 def task():
     book_pattern = re.compile(BOOK_REGEX, re.DOTALL)  # флаг re.DOTALL описывает, что под символом точка может содержаться символ переноса строки
